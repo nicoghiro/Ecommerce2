@@ -34,7 +34,7 @@ namespace csharp_oop_ecommerce_basic
             try
             {
                 
-                Product p = new Product(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text));
+                Product p = new elettronico(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text),"pippo");
                 carr.Add(p);
                 updateCarrView();
 
@@ -47,7 +47,7 @@ namespace csharp_oop_ecommerce_basic
         private void buttonEdit_Click(object sender, EventArgs e)
         {
 
-            Product p = new Product(labelID.Text, textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text));
+            Product p = new elettronico(labelID.Text, textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text),"pippo");
             if(carr.IndexOf(p)<0)
             {
                 MessageBox.Show("ID prodotto non valido");
@@ -62,7 +62,7 @@ namespace csharp_oop_ecommerce_basic
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            Product p = new Product(labelID.Text, textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text));
+            Product p = new elettronico(labelID.Text, textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text),"pippo");
             if (carr.IndexOf(p) < 0)
             {
                 MessageBox.Show("Invalid ID");
@@ -94,8 +94,8 @@ namespace csharp_oop_ecommerce_basic
         }
 
         public Product GetProductFromItem(ListViewItem item)
-        {
-            Product p = new Product(item.SubItems[0].Text);
+        { 
+            Product p = new elettronico(item.SubItems[0].Text);
             
             int i = carr.IndexOf(p);
             if (i >= 0)

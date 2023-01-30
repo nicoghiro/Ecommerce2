@@ -8,7 +8,7 @@ namespace csharp_oop_ecommerce_basic.model
 
     //base version by Marco Borelli Nov 2022
     //extended and modified by olprofesur Nov-Dic 2022
-    public class Product
+    abstract public class Product
     {   
         
         //ATTRIBUTES
@@ -134,10 +134,7 @@ namespace csharp_oop_ecommerce_basic.model
         }
 
         //clone
-        public Product Clone()
-        {
-            return new Product(this);
-        }
+        abstract public Product Clone();
 
 
         //Equals

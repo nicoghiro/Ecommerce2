@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="model\Cart.cs" />
     <Compile Include="model\EcommerceFactory.cs" />
+    <Compile Include="model\elettronico.cs" />
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -61,6 +61,10 @@ namespace csharp_oop_ecommerce_basic.model
 
        override public float getScontato()
        {
+        if(DateTime.Compare(DateTime.Now, scadenza) > 0)
+            {
+                throw new Exception("prodotto scaduto");
+            }
         if (DateTime.Compare(DateTime.Now,scadenza.AddDays(-7))>0|| DateTime.Compare(DateTime.Now, scadenza.AddDays(-7))==0 )
         {
                 return base.getScontato() / 100 * 50;

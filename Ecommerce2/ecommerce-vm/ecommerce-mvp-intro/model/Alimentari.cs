@@ -34,34 +34,34 @@ namespace csharp_oop_ecommerce_basic.model
         public Alimentari(string id, string name, string prod, string descr, float price, string[] ingredienti,DateTime Scadenza) : base(id, name, prod, descr, price)
         {
             this.ingredienti = ingredienti; 
-            creazione = DateTime.Now;
             scadenza = Scadenza;
         }
         public Alimentari(string id, string name, string prod, string descro, string[] ingredienti,DateTime Scadenza) : base(id, name, prod, descro)
         {
             this.ingredienti = ingredienti;
-            creazione = DateTime.Now;
+          
             scadenza = Scadenza;
         }
         public Alimentari(Alimentari prodotto) : base(prodotto)
         {
             ingredienti = null;
-            creazione = DateTime.Now;
+            
             scadenza = DateTime.Now;
             scadenza.AddDays(14);
         }
         public Alimentari(string id) : base(id)
         {
           ingredienti=null;
-            creazione = DateTime.Now;
+           
         }
         override public Product Clone()
         {
             return new Alimentari(this);
         }
+
        override public float getScontato()
        {
-        if (DateTime.Now >scadenza.AddDays(-7) )
+        if (DateTime.Compare(DateTime.Now,scadenza.AddDays(-7))>0|| DateTime.Compare(DateTime.Now, scadenza.AddDays(-7))==0 )
         {
                 return base.getScontato() / 100 * 50;
         }

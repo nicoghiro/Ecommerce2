@@ -30,12 +30,22 @@ namespace csharp_oop_ecommerce_basic
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    Product  p = new elettronico(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text), "pippo");
+                    carr.Add(p);
+                }
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Product p = new Alimentari(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text), null,dateTimePicker1.Value);
+                    carr.Add(p);
+                }
                 
-                Product p = new elettronico(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text),"pippo");
-                carr.Add(p);
                 updateCarrView();
+                
 
             } catch(Exception ex)
             {
@@ -145,7 +155,7 @@ namespace csharp_oop_ecommerce_basic
                 item.SubItems.Add(prodotti[i].Name);
                 item.SubItems.Add(prodotti[i].Manufacturer);
                 item.SubItems.Add(prodotti[i].Description);
-                item.SubItems.Add(""+prodotti[i].Price);
+                item.SubItems.Add(""+prodotti[i].getScontato());
                 list.Items.Add(item);
             }
 
@@ -162,12 +172,18 @@ namespace csharp_oop_ecommerce_basic
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.DisplayMember = "alimantari";
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            if(comboBox1.SelectedIndex == 0)
+            {
+                dateTimePicker1.Show();
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                dateTimePicker1.Hide();
+            }
         }
     }
 }

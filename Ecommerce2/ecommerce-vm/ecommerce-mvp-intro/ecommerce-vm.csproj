@@ -48,8 +48,11 @@
   <ItemGroup>
     <Compile Include="model\Cart.cs" />
     <Compile Include="model\Alimentari.cs" />
+    <Compile Include="model\Cartoleria.cs" />
     <Compile Include="model\EcommerceFactory.cs" />
     <Compile Include="model\elettronico.cs" />
+    <Compile Include="model\fogli.cs" />
+    <Compile Include="model\Penne.cs" />
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

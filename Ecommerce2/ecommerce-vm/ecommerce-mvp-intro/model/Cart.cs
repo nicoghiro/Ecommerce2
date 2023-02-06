@@ -9,7 +9,8 @@ namespace csharp_oop_ecommerce_basic.model
     public class Cart
     {
         //attributes
-        private float totale = 0;
+        private float totale=0;
+        private float totale_S=0;
         private const int MAXCARR = 999;
         private string _id;
         private int currentLenght;
@@ -30,7 +31,14 @@ namespace csharp_oop_ecommerce_basic.model
                     throw new Exception("Invalid Id");
             }
         }
-
+        public float getTotale()
+        {
+            return totale;
+        }
+        public float getTotale_S()
+        {
+            return totale_S;
+        }
         public Product[] Products
         {
             get
@@ -92,7 +100,9 @@ namespace csharp_oop_ecommerce_basic.model
             if (p != null) {
                 _prod[currentLenght] = p;
                 ++currentLenght;
-                totale = totale + p.getScontato(); }
+                totale = totale + p.Price;
+                totale_S = totale_S + p.getScontato();
+            }
             else{
                 throw new Exception("Invalid product");
 

@@ -37,13 +37,31 @@ namespace csharp_oop_ecommerce_basic
                 {
                     Product  p = new elettronico(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text), "pippo");
                     carr.Add(p);
+                    label5.Text = Convert.ToString(carr.getTotale())+" €";
+                    label6.Text = Convert.ToString(carr.getTotale_S()) + " €";
                 }
                 if (comboBox1.SelectedIndex == 0)
                 {
                     Product p = new Alimentari(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text), null,dateTimePicker1.Value);
                     carr.Add(p);
+                    label5.Text = Convert.ToString(carr.getTotale()) + " €";
+                    label6.Text = Convert.ToString(carr.getTotale_S()) + " €";
                 }
-                
+                if (comboBox1.SelectedIndex == 2)
+                {
+                    Product p = new Penne(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text),textBox1.Text);
+                    carr.Add(p);
+                    label5.Text = Convert.ToString(carr.getTotale()) + " €";
+                    label6.Text = Convert.ToString(carr.getTotale_S()) + " €";
+                }
+                if (comboBox1.SelectedIndex == 3)
+                {
+                    Product p = new fogli(EcommerceFactory.getProductID(), textBoxName.Text, textBoxManifacturer.Text, textBoxDescription.Text, float.Parse(textBoxPrice.Text), textBox1.Text);
+                    carr.Add(p);
+                    label5.Text = Convert.ToString(carr.getTotale()) + " €";
+                    label6.Text = Convert.ToString(carr.getTotale_S()) + " €";
+                }
+
                 updateCarrView();
                 
 
@@ -172,18 +190,43 @@ namespace csharp_oop_ecommerce_basic
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if(comboBox1.SelectedIndex == 0)
             {
+                textBox1.Hide();
+                label3.Hide();
                 dateTimePicker1.Show();
             }
             if (comboBox1.SelectedIndex == 1)
             {
+                textBox1.Hide();
+                label3.Hide();
+                dateTimePicker1.Hide();
+            } 
+            if (comboBox1.SelectedIndex == 2)
+            {
+                textBox1.Show();
+                label3.Text = "funzionamento";
+                label3.Show();
                 dateTimePicker1.Hide();
             }
+            if (comboBox1.SelectedIndex == 3)
+            {
+                textBox1.Show();
+                label3.Text="grammatura";
+                label3.Show();
+                dateTimePicker1.Hide();
+            }
+           
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

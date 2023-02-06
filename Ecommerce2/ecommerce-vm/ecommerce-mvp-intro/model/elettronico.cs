@@ -37,7 +37,7 @@ namespace csharp_oop_ecommerce_basic.model
             if (today.DayOfWeek == DayOfWeek.Monday)
             {
                 
-                temp=Price = (Price / 100)*95;
+                temp=(Price / 100)*95;
                 return temp ;
             }
             return base.getScontato();

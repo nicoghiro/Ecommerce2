@@ -42,15 +42,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxManifacturer = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // list
             // 
             this.list.HideSelection = false;
-            this.list.Location = new System.Drawing.Point(12, 190);
+            this.list.Location = new System.Drawing.Point(7, 112);
+            this.list.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.list.MultiSelect = false;
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(847, 616);
+            this.list.Size = new System.Drawing.Size(510, 366);
             this.list.TabIndex = 0;
             this.list.UseCompatibleStateImageBehavior = false;
             this.list.View = System.Windows.Forms.View.Details;
@@ -58,9 +61,10 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(884, 418);
+            this.buttonEdit.Location = new System.Drawing.Point(530, 247);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(124, 71);
+            this.buttonEdit.Size = new System.Drawing.Size(74, 42);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "Modifica";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -68,74 +72,83 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(12, 71);
+            this.textBoxName.Location = new System.Drawing.Point(7, 42);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(222, 28);
+            this.textBoxName.Size = new System.Drawing.Size(135, 20);
             this.textBoxName.TabIndex = 3;
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(12, 46);
+            this.labelNome.Location = new System.Drawing.Point(7, 27);
+            this.labelNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(57, 22);
+            this.labelNome.Size = new System.Drawing.Size(35, 13);
             this.labelNome.TabIndex = 4;
             this.labelNome.Text = "Nome";
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(12, 9);
+            this.labelID.Location = new System.Drawing.Point(7, 5);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(27, 22);
+            this.labelID.Size = new System.Drawing.Size(18, 13);
             this.labelID.TabIndex = 5;
             this.labelID.Text = "ID";
             // 
             // labelIDValue
             // 
             this.labelIDValue.AutoSize = true;
-            this.labelIDValue.Location = new System.Drawing.Point(45, 9);
+            this.labelIDValue.Location = new System.Drawing.Point(27, 5);
+            this.labelIDValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIDValue.Name = "labelIDValue";
-            this.labelIDValue.Size = new System.Drawing.Size(0, 22);
+            this.labelIDValue.Size = new System.Drawing.Size(0, 13);
             this.labelIDValue.TabIndex = 6;
             // 
             // LabelDescrizione
             // 
             this.LabelDescrizione.AutoSize = true;
-            this.LabelDescrizione.Location = new System.Drawing.Point(12, 114);
+            this.LabelDescrizione.Location = new System.Drawing.Point(7, 67);
+            this.LabelDescrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelDescrizione.Name = "LabelDescrizione";
-            this.LabelDescrizione.Size = new System.Drawing.Size(103, 22);
+            this.LabelDescrizione.Size = new System.Drawing.Size(62, 13);
             this.LabelDescrizione.TabIndex = 8;
             this.LabelDescrizione.Text = "Descrizione";
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(12, 139);
+            this.textBoxDescription.Location = new System.Drawing.Point(7, 82);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(635, 28);
+            this.textBoxDescription.Size = new System.Drawing.Size(383, 20);
             this.textBoxDescription.TabIndex = 7;
             // 
             // labelPrezzo
             // 
             this.labelPrezzo.AutoSize = true;
-            this.labelPrezzo.Location = new System.Drawing.Point(518, 40);
+            this.labelPrezzo.Location = new System.Drawing.Point(311, 24);
+            this.labelPrezzo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrezzo.Name = "labelPrezzo";
-            this.labelPrezzo.Size = new System.Drawing.Size(64, 22);
+            this.labelPrezzo.Size = new System.Drawing.Size(39, 13);
             this.labelPrezzo.TabIndex = 10;
             this.labelPrezzo.Text = "Prezzo";
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(517, 71);
+            this.textBoxPrice.Location = new System.Drawing.Point(310, 42);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(109, 28);
+            this.textBoxPrice.Size = new System.Drawing.Size(67, 20);
             this.textBoxPrice.TabIndex = 9;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(735, 71);
+            this.buttonAdd.Location = new System.Drawing.Point(441, 42);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(124, 71);
+            this.buttonAdd.Size = new System.Drawing.Size(74, 42);
             this.buttonAdd.TabIndex = 11;
             this.buttonAdd.Text = "Aggiungi";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -144,35 +157,62 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 46);
+            this.label1.Location = new System.Drawing.Point(157, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 22);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Produttore";
-            //this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBoxManifacturer
             // 
-            this.textBoxManifacturer.Location = new System.Drawing.Point(262, 71);
+            this.textBoxManifacturer.Location = new System.Drawing.Point(157, 42);
+            this.textBoxManifacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxManifacturer.Name = "textBoxManifacturer";
-            this.textBoxManifacturer.Size = new System.Drawing.Size(222, 28);
+            this.textBoxManifacturer.Size = new System.Drawing.Size(135, 20);
             this.textBoxManifacturer.TabIndex = 12;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(884, 518);
+            this.buttonDelete.Location = new System.Drawing.Point(530, 306);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(124, 71);
+            this.buttonDelete.Size = new System.Drawing.Size(74, 42);
             this.buttonDelete.TabIndex = 14;
             this.buttonDelete.Text = "Elimina";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(645, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tipologia";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "alimentari",
+            "elettronico"});
+            this.comboBox1.Location = new System.Drawing.Point(629, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 819);
+            this.ClientSize = new System.Drawing.Size(814, 484);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxManifacturer);
@@ -187,8 +227,10 @@
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.list);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Basic Ecommerce Sample";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +252,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxManifacturer;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

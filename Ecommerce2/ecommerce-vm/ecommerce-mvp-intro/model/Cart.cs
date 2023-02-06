@@ -9,6 +9,7 @@ namespace csharp_oop_ecommerce_basic.model
     public class Cart
     {
         //attributes
+        private float totale = 0;
         private const int MAXCARR = 999;
         private string _id;
         private int currentLenght;
@@ -35,7 +36,7 @@ namespace csharp_oop_ecommerce_basic.model
             get
             {
                 Product[] p = new Product[currentLenght];
-                for(int i=0; i<currentLenght; i++)
+                for (int i = 0; i < currentLenght; i++)
                 {
                     p[i] = _prod[i];
                 }
@@ -88,18 +89,16 @@ namespace csharp_oop_ecommerce_basic.model
                 throw new Exception("Unable to add, MAX dimension of internal array reached");
             }
 
-            if (p != null)
-            {
-                if( p is elettronico) {
-                    DateTime today = DateTime.Today;
-                    if (today.DayOfWeek == DayOfWeek.Monday) {
-                        p.Price = (p.Price * 95) / 100;
-                    } _prod[currentLenght] = p;
+            if (p != null) {
+                _prod[currentLenght] = p;
                 ++currentLenght;
-                }
-            }
-            else
+                totale = totale + p.getScontato(); }
+            else{
                 throw new Exception("Invalid product");
+
+        }
+            
+    
         }
 
         private int Lenght()

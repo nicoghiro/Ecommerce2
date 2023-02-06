@@ -21,7 +21,6 @@ namespace csharp_oop_ecommerce_basic
         public Form1()
         {
             InitializeComponent();
-
             carr = EcommerceFactory.getSampleCart();
 
             setHeaderCarrView();
@@ -156,5 +155,19 @@ namespace csharp_oop_ecommerce_basic
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.DisplayMember = "alimantari";
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

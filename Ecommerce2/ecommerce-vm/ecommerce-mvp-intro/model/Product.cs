@@ -9,8 +9,8 @@ namespace csharp_oop_ecommerce_basic.model
     //base version by Marco Borelli Nov 2022
     //extended and modified by olprofesur Nov-Dic 2022
     abstract public class Product
-    {   
-        
+    {
+
         //ATTRIBUTES
         private string _id, _name, _manufacturer, _description;
         private float _price;
@@ -95,7 +95,7 @@ namespace csharp_oop_ecommerce_basic.model
 
         public Product(string id, string name, string prod, string descr, float price)
         {
-            if(String.IsNullOrEmpty(id) || String.IsNullOrEmpty(name) || String.IsNullOrEmpty(prod) || price<=0)
+            if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(name) || String.IsNullOrEmpty(prod) || price <= 0)
             {
                 throw new Exception("invalid product parameters ");
             }
@@ -135,7 +135,14 @@ namespace csharp_oop_ecommerce_basic.model
 
         //clone
         abstract public Product Clone();
+        public virtual float getScontato()
+        {
+            return Price;
+        }
+        
 
+   
+        
 
         //Equals
 
